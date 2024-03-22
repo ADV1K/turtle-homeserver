@@ -1,0 +1,15 @@
+{
+    acme_dns cloudflare {env.CLOUDFLARE_API_TOKEN} #  for Cloudflare
+    # acme_dns duckdns {env.DUCKDNS_API_TOKEN} #  for DuckDNS
+
+    # only allow connection from cloudflare IPs
+    servers {
+        trusted_proxies cloudflare {
+          interval 12h
+          timeout 15s
+        }
+      }
+
+}
+
+
