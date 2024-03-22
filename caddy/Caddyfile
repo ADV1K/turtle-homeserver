@@ -1,15 +1,27 @@
 {
-    acme_dns cloudflare {env.CLOUDFLARE_API_TOKEN} #  for Cloudflare
-    # acme_dns duckdns {env.DUCKDNS_API_TOKEN} #  for DuckDNS
+  acme_dns cloudflare {env.CLOUDFLARE_API_TOKEN} #  for Cloudflare
 
-    # only allow connection from cloudflare IPs
-    servers {
-        trusted_proxies cloudflare {
-          interval 12h
-          timeout 15s
-        }
+  # only allow connection from cloudflare IPs
+  servers {
+    trusted_proxies cloudflare {
+      interval 12h
+      timeout 15s
+    }
+  }
+
+  {
+    dynamic_dns {
+      provider cloudflare {env.CLOUDFLARE_API_TOKEN}  # for Cloudflare
+      domains {
+        advik.lol
       }
+    }
+  }
+}
 
+# Immich: proxy 0.0.0.0:2283
+photos.advik.lol {
+  reverse_proxy 0.0.0.0:2283
 }
 
 
