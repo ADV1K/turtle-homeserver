@@ -1,0 +1,75 @@
+[2024-03-29 00:55:28.981 +00:00] [INF] [97] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Scan Media Library"
+[2024-03-29 00:55:28.981 +00:00] [INF] [97] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "RefreshMediaLibraryTask"
+[2024-03-29 00:55:28.982 +00:00] [INF] [97] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scan Media Library"
+[2024-03-29 00:55:28.982 +00:00] [INF] [97] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2024-03-29 00:55:28.999 +00:00] [ERR] [78] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2024-03-29 00:55:29.000 +00:00] [INF] [78] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 00:55:29.000 +00:00] [INF] [78] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 00:55:30.629 +00:00] [INF] [78] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Refresh Guide"
+[2024-03-29 00:55:30.629 +00:00] [INF] [78] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "RefreshGuideScheduledTask"
+[2024-03-29 00:55:30.629 +00:00] [INF] [73] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Refresh Guide"
+[2024-03-29 00:55:33.633 +00:00] [INF] [73] Emby.Server.Implementations.LiveTv.LiveTvManager: Refreshing guide with 7 days of guide data
+[2024-03-29 00:55:33.634 +00:00] [INF] [73] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Refresh Guide" Completed after 0 minute(s) and 3 seconds
+[2024-03-29 00:55:33.635 +00:00] [INF] [73] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 02:00:00.001 +00:00] [INF] [24] Emby.Server.Implementations.ScheduledTasks.TaskManager: "DailyTrigger" fired for task: "Extract Chapter Images"
+[2024-03-29 02:00:00.001 +00:00] [INF] [24] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "ChapterImagesTask"
+[2024-03-29 02:00:00.002 +00:00] [INF] [47] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Extract Chapter Images"
+[2024-03-29 02:00:00.003 +00:00] [INF] [47] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Extract Chapter Images" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 02:00:00.004 +00:00] [INF] [47] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 02:00:01.003 +00:00] [INF] [47] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for "Extract Chapter Images" set to fire at 2024-03-30 02:00:00.000 +00:00, which is 23:59:58.9968983 from now.
+[2024-03-29 12:55:29.000 +00:00] [INF] [95] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Scan Media Library"
+[2024-03-29 12:55:29.001 +00:00] [INF] [95] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "RefreshMediaLibraryTask"
+[2024-03-29 12:55:29.005 +00:00] [INF] [95] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scan Media Library"
+[2024-03-29 12:55:29.005 +00:00] [INF] [95] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2024-03-29 12:55:29.018 +00:00] [ERR] [95] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2024-03-29 12:55:29.020 +00:00] [INF] [95] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 12:55:29.020 +00:00] [INF] [95] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 15:51:18.810 +00:00] [INF] [34] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Update Plugins"
+[2024-03-29 15:51:18.811 +00:00] [INF] [34] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "PluginUpdateTask"
+[2024-03-29 15:51:18.812 +00:00] [INF] [34] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Update Plugins"
+[2024-03-29 15:51:23.319 +00:00] [INF] [22] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Update Plugins" Completed after 0 minute(s) and 4 seconds
+[2024-03-29 15:51:23.320 +00:00] [INF] [22] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 23:55:26.563 +00:00] [INF] [48] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Clean Log Directory"
+[2024-03-29 23:55:26.564 +00:00] [INF] [48] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "DeleteLogFileTask"
+[2024-03-29 23:55:26.564 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Clean Log Directory"
+[2024-03-29 23:55:26.565 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Clean Log Directory" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 23:55:26.566 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 23:55:26.586 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Clean Transcode Directory"
+[2024-03-29 23:55:26.587 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "DeleteTranscodeFileTask"
+[2024-03-29 23:55:26.587 +00:00] [INF] [48] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Clean Transcode Directory"
+[2024-03-29 23:55:26.587 +00:00] [INF] [48] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Clean Transcode Directory" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 23:55:26.587 +00:00] [INF] [48] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 23:55:26.598 +00:00] [INF] [48] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Clean Cache Directory"
+[2024-03-29 23:55:26.598 +00:00] [INF] [48] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "DeleteCacheFileTask"
+[2024-03-29 23:55:26.598 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Clean Cache Directory"
+[2024-03-29 23:55:26.599 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Clean Cache Directory" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 23:55:26.599 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 23:55:26.729 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Download missing subtitles"
+[2024-03-29 23:55:26.730 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "SubtitleScheduledTask"
+[2024-03-29 23:55:26.730 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Download missing subtitles"
+[2024-03-29 23:55:26.730 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Download missing subtitles" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 23:55:26.731 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 23:55:26.781 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "TasksRefreshChannels"
+[2024-03-29 23:55:26.782 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "RefreshChannelsScheduledTask"
+[2024-03-29 23:55:26.782 +00:00] [INF] [97] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "TasksRefreshChannels"
+[2024-03-29 23:55:26.782 +00:00] [INF] [97] Emby.Server.Implementations.ScheduledTasks.TaskManager: "TasksRefreshChannels" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 23:55:26.783 +00:00] [INF] [97] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2024-03-29 23:55:28.111 +00:00] [INF] [97] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Optimize database"
+[2024-03-29 23:55:28.111 +00:00] [INF] [97] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "OptimizeDatabaseTask"
+[2024-03-29 23:55:28.111 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Optimize database"
+[2024-03-29 23:55:28.111 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.Tasks.OptimizeDatabaseTask: Optimizing and vacuuming jellyfin.db...
+[2024-03-29 23:55:28.329 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.Tasks.OptimizeDatabaseTask: jellyfin.db optimized successfully!
+[2024-03-29 23:55:28.329 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Optimize database" Completed after 0 minute(s) and 0 seconds
+[2024-03-29 23:55:28.330 +00:00] [INF] [88] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks

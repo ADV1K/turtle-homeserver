@@ -1,0 +1,13 @@
+2024-03-23 22:55:42.325 +00:00 [INF] Default Quartz.NET properties loaded from embedded resource file
+2024-03-23 22:55:42.392 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-03-23 22:55:42.392 +00:00 [INF] Quartz Scheduler created
+2024-03-23 22:55:42.393 +00:00 [INF] RAMJobStore initialized.
+2024-03-23 22:55:42.393 +00:00 [INF] Quartz Scheduler 3.6.2.0 - 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-03-23 22:55:42.394 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-03-23 22:55:42.394 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-03-23 22:55:42.395 +00:00 [INF] JobFactory set to: Ombi.Schedule.IoCJobFactory
+2024-03-23 22:55:42.468 +00:00 [INF] Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2024-03-23 22:57:00.275 +00:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO __EFMigrationsHistory (MigrationId,ProductVersion)
+                VALUES('20191103205133_Inital', '2.2.6-servicing-10079');
+2024-03-23 23:14:53.566 +00:00 [ERR] StatusCode: Unauthorized, Reason: Unauthorized, RequestUri: http://192.168.1.5:8096/users

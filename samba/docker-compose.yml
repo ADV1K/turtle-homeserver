@@ -1,0 +1,16 @@
+---
+version: "3.9"
+
+services:
+  samba:
+    image: docker.io/servercontainers/samba:latest
+    container_name: samba
+    restart: unless-stopped
+    environment:
+      ACCOUNT_username: advik
+      UID_username: 1000
+      SAMBA_VOLUME_CONFIG_sharename: "[turtle]; path=/shares/location; available = yes; browsable = yes; writable = no; read only = yes; force user = advik; public = yes; guest ok = yes"
+    volumes:
+      - /home/advik:/shares/location
+    ports:
+      - 445:445

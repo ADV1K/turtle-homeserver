@@ -1,0 +1,258 @@
+(N) 2024-03-24T04:14:22 - qBittorrent v4.6.3 started
+(N) 2024-03-24T04:14:22 - Using config directory: /config/qBittorrent
+(N) 2024-03-24T04:14:22 - Trying to listen on the following list of IP addresses: "0.0.0.0:6881,[::]:6881"
+(I) 2024-03-24T04:14:22 - Peer ID: "-qB4630-"
+(I) 2024-03-24T04:14:22 - HTTP User-Agent: "qBittorrent/4.6.3"
+(I) 2024-03-24T04:14:22 - Distributed Hash Table (DHT) support: ON
+(I) 2024-03-24T04:14:22 - Local Peer Discovery support: ON
+(I) 2024-03-24T04:14:22 - Peer Exchange (PeX) support: ON
+(I) 2024-03-24T04:14:22 - Anonymous mode: OFF
+(I) 2024-03-24T04:14:22 - Encryption support: ON
+(W) 2024-03-24T04:14:22 - Couldn't load IP geolocation database. Reason: No such file or directory
+(N) 2024-03-24T04:14:23 - Using built-in WebUI.
+(W) 2024-03-24T04:14:23 - Couldn't load WebUI translation for selected locale (C).
+(N) 2024-03-24T04:14:23 - WebUI: Now listening on IP: *, port: 8080
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "127.0.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "127.0.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "192.168.1.5". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "192.168.1.5". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "100.98.173.32". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "100.98.173.32". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "172.20.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "172.20.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "172.28.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "172.28.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "::1". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "::1". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::7640:bbff:feb1:45cd%wlan0". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::7640:bbff:feb1:45cd%wlan0". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fd7a:115c:a1e0::1322:ad20". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fd7a:115c:a1e0::1322:ad20". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::e313:56f:5e66:6717%tailscale0". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::e313:56f:5e66:6717%tailscale0". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::42:9aff:fe8b:a6ab%br-1792215d9e47". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::42:9aff:fe8b:a6ab%br-1792215d9e47". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::9878:6bff:fe3b:1667%veth52f8aa8". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::9878:6bff:fe3b:1667%veth52f8aa8". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::3c80:4ff:fe6b:2d45%vethb3b670f". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::3c80:4ff:fe6b:2d45%vethb3b670f". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::246c:f2ff:fec0:4c1%veth3736f77". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::246c:f2ff:fec0:4c1%veth3736f77". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::b411:99ff:fe2c:f2bd%veth89210d6". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::b411:99ff:fe2c:f2bd%veth89210d6". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::28ab:7aff:fecf:103e%veth0ed191c". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::28ab:7aff:fecf:103e%veth0ed191c". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::f0ae:d7ff:fe1d:ef10%vethbdf3739". Port: "TCP/6881"
+(I) 2024-03-24T04:14:23 - Successfully listening on IP. IP: "fe80::f0ae:d7ff:fe1d:ef10%vethbdf3739". Port: "UTP/6881"
+(I) 2024-03-24T04:14:23 - Detected external IP. IP: "122.161.50.168"
+(I) 2024-03-24T04:14:23 - IP geolocation database loaded. Type: DBIP-Country-Lite. Build time: Fri Mar 1 06:51:18 2024.
+(I) 2024-03-24T04:14:24 - Successfully updated IP geolocation database.
+(I) 2024-03-24T04:14:24 - Detected external IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd"
+(N) 2024-03-24T04:17:22 - qBittorrent termination initiated
+(N) 2024-03-24T04:17:23 - qBittorrent is now ready to exit
+(N) 2024-03-24T04:17:38 - qBittorrent v4.6.3 started
+(N) 2024-03-24T04:17:38 - Using config directory: /config/qBittorrent
+(N) 2024-03-24T04:17:38 - Trying to listen on the following list of IP addresses: "0.0.0.0:6881,[::]:6881"
+(I) 2024-03-24T04:17:38 - Peer ID: "-qB4630-"
+(I) 2024-03-24T04:17:38 - HTTP User-Agent: "qBittorrent/4.6.3"
+(I) 2024-03-24T04:17:38 - Distributed Hash Table (DHT) support: ON
+(I) 2024-03-24T04:17:38 - Local Peer Discovery support: ON
+(I) 2024-03-24T04:17:38 - Peer Exchange (PeX) support: ON
+(I) 2024-03-24T04:17:38 - Anonymous mode: OFF
+(I) 2024-03-24T04:17:38 - Encryption support: ON
+(I) 2024-03-24T04:17:38 - IP geolocation database loaded. Type: DBIP-Country-Lite. Build time: Fri Mar 1 06:51:18 2024.
+(N) 2024-03-24T04:17:38 - Using built-in WebUI.
+(W) 2024-03-24T04:17:38 - Couldn't load WebUI translation for selected locale (C).
+(N) 2024-03-24T04:17:38 - WebUI: Now listening on IP: *, port: 8080
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "127.0.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "127.0.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "192.168.1.5". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "192.168.1.5". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "100.98.173.32". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "100.98.173.32". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "172.20.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "172.20.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "172.29.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "172.29.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "::1". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "::1". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::7640:bbff:feb1:45cd%wlan0". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::7640:bbff:feb1:45cd%wlan0". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fd7a:115c:a1e0::1322:ad20". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fd7a:115c:a1e0::1322:ad20". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::e313:56f:5e66:6717%tailscale0". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::e313:56f:5e66:6717%tailscale0". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::42:9aff:fe8b:a6ab%br-1792215d9e47". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::42:9aff:fe8b:a6ab%br-1792215d9e47". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::9878:6bff:fe3b:1667%veth52f8aa8". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::9878:6bff:fe3b:1667%veth52f8aa8". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::3c80:4ff:fe6b:2d45%vethb3b670f". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::3c80:4ff:fe6b:2d45%vethb3b670f". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::b411:99ff:fe2c:f2bd%veth89210d6". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::b411:99ff:fe2c:f2bd%veth89210d6". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::28ab:7aff:fecf:103e%veth0ed191c". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::28ab:7aff:fecf:103e%veth0ed191c". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::f0ae:d7ff:fe1d:ef10%vethbdf3739". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::f0ae:d7ff:fe1d:ef10%vethbdf3739". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::30af:26ff:feec:fa17%vetha127760". Port: "TCP/6881"
+(I) 2024-03-24T04:17:38 - Successfully listening on IP. IP: "fe80::30af:26ff:feec:fa17%vetha127760". Port: "UTP/6881"
+(I) 2024-03-24T04:17:38 - Detected external IP. IP: "122.161.50.168"
+(I) 2024-03-24T04:17:39 - Detected external IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd"
+(N) 2024-03-24T04:24:21 - qBittorrent termination initiated
+(N) 2024-03-24T04:24:21 - qBittorrent is now ready to exit
+(N) 2024-03-24T04:25:22 - qBittorrent v4.6.3 started
+(N) 2024-03-24T04:25:22 - Using config directory: /config/qBittorrent
+(N) 2024-03-24T04:25:22 - Trying to listen on the following list of IP addresses: "0.0.0.0:6881,[::]:6881"
+(I) 2024-03-24T04:25:22 - Peer ID: "-qB4630-"
+(I) 2024-03-24T04:25:22 - HTTP User-Agent: "qBittorrent/4.6.3"
+(I) 2024-03-24T04:25:22 - Distributed Hash Table (DHT) support: ON
+(I) 2024-03-24T04:25:22 - Local Peer Discovery support: ON
+(I) 2024-03-24T04:25:22 - Peer Exchange (PeX) support: ON
+(I) 2024-03-24T04:25:22 - Anonymous mode: OFF
+(I) 2024-03-24T04:25:22 - Encryption support: ON
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "127.0.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "127.0.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "192.168.1.5". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "192.168.1.5". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "100.98.173.32". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "100.98.173.32". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "172.20.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "172.20.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "172.30.0.1". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "172.30.0.1". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "::1". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "::1". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::7640:bbff:feb1:45cd%wlan0". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::7640:bbff:feb1:45cd%wlan0". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fd7a:115c:a1e0::1322:ad20". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fd7a:115c:a1e0::1322:ad20". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::e313:56f:5e66:6717%tailscale0". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::e313:56f:5e66:6717%tailscale0". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::42:9aff:fe8b:a6ab%br-1792215d9e47". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::42:9aff:fe8b:a6ab%br-1792215d9e47". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::9878:6bff:fe3b:1667%veth52f8aa8". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::9878:6bff:fe3b:1667%veth52f8aa8". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::3c80:4ff:fe6b:2d45%vethb3b670f". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::3c80:4ff:fe6b:2d45%vethb3b670f". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::b411:99ff:fe2c:f2bd%veth89210d6". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::b411:99ff:fe2c:f2bd%veth89210d6". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::28ab:7aff:fecf:103e%veth0ed191c". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::28ab:7aff:fecf:103e%veth0ed191c". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::f0ae:d7ff:fe1d:ef10%vethbdf3739". Port: "TCP/6881"
+(I) 2024-03-24T04:25:22 - Successfully listening on IP. IP: "fe80::f0ae:d7ff:fe1d:ef10%vethbdf3739". Port: "UTP/6881"
+(I) 2024-03-24T04:25:22 - IP geolocation database loaded. Type: DBIP-Country-Lite. Build time: Fri Mar 1 06:51:18 2024.
+(N) 2024-03-24T04:25:23 - Using built-in WebUI.
+(W) 2024-03-24T04:25:23 - Couldn't load WebUI translation for selected locale (C).
+(N) 2024-03-24T04:25:23 - WebUI: Now listening on IP: *, port: 8080
+(I) 2024-03-24T04:25:23 - Detected external IP. IP: "122.161.50.168"
+(I) 2024-03-24T04:25:24 - Detected external IP. IP: "2401:4900:1c5d:8ac3:7640:bbff:feb1:45cd"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::42:afff:feb7:e5fd%br-3565f3ff91b0". Port: "TCP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::42:afff:feb7:e5fd%br-3565f3ff91b0". Port: "UTP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::ecc2:63ff:fed2:e212%veth3bf8edf". Port: "TCP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::ecc2:63ff:fed2:e212%veth3bf8edf". Port: "UTP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::bc39:42ff:fe2f:a543%veth8f98baf". Port: "TCP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::bc39:42ff:fe2f:a543%veth8f98baf". Port: "UTP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::878:86ff:fe3e:2fc8%vethc79d3fb". Port: "TCP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::878:86ff:fe3e:2fc8%vethc79d3fb". Port: "UTP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::bc38:d9ff:fe52:8cf1%veth66eba4a". Port: "TCP/6881"
+(I) 2024-03-24T05:32:48 - Successfully listening on IP. IP: "fe80::bc38:d9ff:fe52:8cf1%veth66eba4a". Port: "UTP/6881"
+(I) 2024-03-25T08:10:38 - Detected external IP. IP: "122.161.48.6"
+(I) 2024-03-25T08:21:03 - Detected external IP. IP: "122.161.51.135"
+(N) 2024-03-26T21:19:16 - qBittorrent termination initiated
+(N) 2024-03-26T21:19:16 - qBittorrent is now ready to exit
+(N) 2024-03-26T21:20:56 - qBittorrent v4.6.3 started
+(N) 2024-03-26T21:20:56 - Using config directory: /config/qBittorrent
+(N) 2024-03-26T21:20:56 - Trying to listen on the following list of IP addresses: "0.0.0.0:6881,[::]:6881"
+(I) 2024-03-26T21:20:57 - Peer ID: "-qB4630-"
+(I) 2024-03-26T21:20:57 - HTTP User-Agent: "qBittorrent/4.6.3"
+(I) 2024-03-26T21:20:57 - Distributed Hash Table (DHT) support: ON
+(I) 2024-03-26T21:20:57 - Local Peer Discovery support: ON
+(I) 2024-03-26T21:20:57 - Peer Exchange (PeX) support: ON
+(I) 2024-03-26T21:20:57 - Anonymous mode: OFF
+(I) 2024-03-26T21:20:57 - Encryption support: ON
+(I) 2024-03-26T21:20:57 - IP geolocation database loaded. Type: DBIP-Country-Lite. Build time: Fri Mar 1 06:51:18 2024.
+(N) 2024-03-26T21:20:57 - Using built-in WebUI.
+(W) 2024-03-26T21:20:57 - Couldn't load WebUI translation for selected locale (C).
+(N) 2024-03-26T21:20:57 - WebUI: Now listening on IP: *, port: 8080
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "127.0.0.1". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "127.0.0.1". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "192.168.1.5". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "192.168.1.5". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "100.98.173.32". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "100.98.173.32". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "172.20.0.1". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "172.20.0.1". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "172.31.0.1". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "172.31.0.1". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "::1". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "::1". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "2401:4900:1c5b:82b8:7640:bbff:feb1:45cd". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "2401:4900:1c5b:82b8:7640:bbff:feb1:45cd". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::7640:bbff:feb1:45cd%wlan0". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::7640:bbff:feb1:45cd%wlan0". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fd7a:115c:a1e0::1322:ad20". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fd7a:115c:a1e0::1322:ad20". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::e313:56f:5e66:6717%tailscale0". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::e313:56f:5e66:6717%tailscale0". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::42:9aff:fe8b:a6ab%br-1792215d9e47". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::42:9aff:fe8b:a6ab%br-1792215d9e47". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::9878:6bff:fe3b:1667%veth52f8aa8". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::9878:6bff:fe3b:1667%veth52f8aa8". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::3c80:4ff:fe6b:2d45%vethb3b670f". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::3c80:4ff:fe6b:2d45%vethb3b670f". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::b411:99ff:fe2c:f2bd%veth89210d6". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::b411:99ff:fe2c:f2bd%veth89210d6". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::28ab:7aff:fecf:103e%veth0ed191c". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::28ab:7aff:fecf:103e%veth0ed191c". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::f0ae:d7ff:fe1d:ef10%vethbdf3739". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::f0ae:d7ff:fe1d:ef10%vethbdf3739". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::42:13ff:fe0e:3871%br-6917e8f13e64". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::42:13ff:fe0e:3871%br-6917e8f13e64". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::38a3:72ff:fe5d:4c7f%veth0df5ad6". Port: "TCP/6881"
+(I) 2024-03-26T21:20:57 - Successfully listening on IP. IP: "fe80::38a3:72ff:fe5d:4c7f%veth0df5ad6". Port: "UTP/6881"
+(I) 2024-03-26T21:20:57 - Detected external IP. IP: "122.161.51.135"
+(I) 2024-03-26T21:20:58 - Detected external IP. IP: "2401:4900:1c5b:82b8:7640:bbff:feb1:45cd"
+(I) 2024-03-26T21:30:14 - Successfully listening on IP. IP: "fe80::4ce7:c6ff:fecf:8877%veth04f5243". Port: "TCP/6881"
+(I) 2024-03-26T21:30:14 - Successfully listening on IP. IP: "fe80::4ce7:c6ff:fecf:8877%veth04f5243". Port: "UTP/6881"
+(I) 2024-03-26T21:30:14 - Successfully listening on IP. IP: "fe80::88d1:2cff:fe22:7e37%veth1051640". Port: "TCP/6881"
+(I) 2024-03-26T21:30:14 - Successfully listening on IP. IP: "fe80::88d1:2cff:fe22:7e37%veth1051640". Port: "UTP/6881"
+(I) 2024-03-26T21:30:14 - Successfully listening on IP. IP: "fe80::fce2:40ff:feb2:f727%vethce45244". Port: "TCP/6881"
+(I) 2024-03-26T21:30:14 - Successfully listening on IP. IP: "fe80::fce2:40ff:feb2:f727%vethce45244". Port: "UTP/6881"
+(I) 2024-03-26T21:30:14 - Successfully listening on IP. IP: "fe80::98a1:aeff:fefe:ab72%veth97a1bb5". Port: "TCP/6881"
+(I) 2024-03-26T21:30:14 - Successfully listening on IP. IP: "fe80::98a1:aeff:fefe:ab72%veth97a1bb5". Port: "UTP/6881"
+(N) 2024-03-26T21:42:47 - qBittorrent termination initiated
+(N) 2024-03-26T21:42:47 - qBittorrent is now ready to exit
+(N) 2024-03-26T21:43:06 - qBittorrent v4.6.3 started
+(N) 2024-03-26T21:43:06 - Using config directory: /config/qBittorrent
+(N) 2024-03-26T21:43:06 - Trying to listen on the following list of IP addresses: "0.0.0.0:6881,[::]:6881"
+(I) 2024-03-26T21:43:06 - Peer ID: "-qB4630-"
+(I) 2024-03-26T21:43:06 - HTTP User-Agent: "qBittorrent/4.6.3"
+(I) 2024-03-26T21:43:06 - Distributed Hash Table (DHT) support: ON
+(I) 2024-03-26T21:43:06 - Local Peer Discovery support: ON
+(I) 2024-03-26T21:43:06 - Peer Exchange (PeX) support: ON
+(I) 2024-03-26T21:43:06 - Anonymous mode: OFF
+(I) 2024-03-26T21:43:06 - Encryption support: ON
+(I) 2024-03-26T21:43:06 - Successfully listening on IP. IP: "127.0.0.1". Port: "TCP/6881"
+(I) 2024-03-26T21:43:06 - Successfully listening on IP. IP: "127.0.0.1". Port: "UTP/6881"
+(I) 2024-03-26T21:43:06 - Successfully listening on IP. IP: "192.168.48.4". Port: "TCP/6881"
+(I) 2024-03-26T21:43:06 - Successfully listening on IP. IP: "192.168.48.4". Port: "UTP/6881"
+(I) 2024-03-26T21:43:06 - IP geolocation database loaded. Type: DBIP-Country-Lite. Build time: Fri Mar 1 06:51:18 2024.
+(N) 2024-03-26T21:43:06 - Using built-in WebUI.
+(W) 2024-03-26T21:43:06 - Couldn't load WebUI translation for selected locale (C).
+(N) 2024-03-26T21:43:06 - WebUI: Now listening on IP: *, port: 8080
+(I) 2024-03-26T21:43:06 - Detected external IP. IP: "122.161.51.135"
+(I) 2024-03-27T17:16:36 - Detected external IP. IP: "122.161.52.249"
+(I) 2024-03-29T11:05:29 - Detected external IP. IP: "122.161.50.26"
+(I) 2024-03-29T11:34:45 - Detected external IP. IP: "122.161.48.173"
+(I) 2024-03-29T12:06:25 - Detected external IP. IP: "122.161.48.239"
+(I) 2024-03-29T12:23:45 - Detected external IP. IP: "122.161.52.229"
+(I) 2024-03-30T00:22:24 - Detected external IP. IP: "122.161.49.76"
+(I) 2024-03-30T00:27:24 - Detected external IP. IP: "122.161.49.76"
+(N) 2024-03-31T00:47:00 - qBittorrent termination initiated
+(N) 2024-03-31T00:47:02 - qBittorrent is now ready to exit
