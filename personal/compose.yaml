@@ -1,0 +1,108 @@
+services:
+  syncthing:
+    image: lscr.io/linuxserver/syncthing:latest
+    container_name: syncthing
+    hostname: Turtle
+    environment:
+      - PUID=$UID
+      - PGID=$GID
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - $CONFIG/syncthing:/config
+      - $DATA:/data
+    ports:
+      # - 8384:8384
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp
+    networks:
+      - internal
+    labels:
+      caddy: syncthing.home.advik.one
+      caddy.reverse_proxy: "{{upstreams 8384}}"
+    restart: unless-stopped
+
+  samba:
+    image: ghcr.io/servercontainers/samba:latest
+    container_name: samba
+    network_mode: host
+    cap_add:  # needed for discovery by windows
+      - CAP_NET_ADMIN
+    environment:
+      FAIL_FAST: 1
+
+      MODEL: TimeCapsule
+      AVAHI_NAME: StorageServer
+
+      GROUP_family: 2000
+
+      ACCOUNT_advik: ${SAMBA_PASSWORD_ADVIK}
+      UID_advik: 1000
+      GROUPS_advik: family
+
+      SAMBA_VOLUME_CONFIG_home: "[Home]; path=/shares/home; available = yes; browsable = yes; read only = no; public = yes; guest ok = no"
+      SAMBA_VOLUME_CONFIG_public: "[Public]; path=/shares/public; available = yes; browsable = yes; writable = yes; read only = no; public = yes; guest ok = no"
+      SAMBA_VOLUME_CONFIG_storage: "[Common Storage]; path=/shares/storage; available = yes; browsable = yes; writable = yes; read only = no; public = yes; guest ok = no"
+      SAMBA_VOLUME_CONFIG_timemachine: "[Time Machine]; path=/shares/timemachine/%U; guest ok = no; read only = no; browseable = yes; fruit:time machine = yes; fruit:time machine max size = 200G"
+    volumes:
+      - ~:/shares/home
+      - ${COMMON_NETWORK_STORAGE}:/shares/storage
+      - ${PUBLIC}:/shares/public
+      - ${TIMEMACHINE}:/shares/timemachine
+    # ports:
+    #   - 445:445
+    restart: unless-stopped
+
+
+  # redis:
+  #   container_name: redis
+  #   image: redis:7-alpine
+  #   networks:
+  #     - internal
+  #   restart: unless-stopped
+  #
+  # paperless:
+  #   container_name: paperless
+  #   image: ghcr.io/paperless-ngx/paperless-ngx:latest
+  #   depends_on:
+  #     - redis
+  #     - gotenberg
+  #     - tika
+  #   # ports:
+  #   #   - "8000:8000"
+  #   volumes:
+  #     - data:/usr/src/paperless/data
+  #     - media:/usr/src/paperless/media
+  #     # - ./export:/usr/src/paperless/export
+  #     # - ./consume:/usr/src/paperless/consume
+  #   environment:
+  #     PAPERLESS_REDIS: redis://redis:6379
+  #     PAPERLESS_TIKA_ENABLED: 1
+  #     PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://gotenberg:3000
+  #     PAPERLESS_TIKA_ENDPOINT: http://tika:9998
+  #   networks:
+  #     - internal
+  #   restart: unless-stopped
+  #
+  # gotenberg:
+  #   container_name: gotenberg
+  #   image: docker.io/gotenberg/gotenberg:8.7
+  #   # The gotenberg chromium route is used to convert .eml files. We do not
+  #   # want to allow external content like tracking pixels or even javascript.
+  #   command:
+  #     - "gotenberg"
+  #     - "--chromium-disable-javascript=true"
+  #     - "--chromium-allow-list=file:///tmp/.*"
+  #   networks:
+  #     - internal
+  #   restart: unless-stopped
+  #
+  #
+  # tika:
+  #   image: docker.io/apache/tika:latest
+  #   restart: unless-stoppe
+
+networks:
+  internal:
+    external: true
+    enable_ipv6: true

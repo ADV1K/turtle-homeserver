@@ -1,0 +1,28 @@
+services:
+  whoami:
+    image: traefik/whoami
+    container_name: whoami
+    networks:
+      - internal
+    labels:
+      caddy: whoami.local
+      caddy.reverse_proxy: "{{upstreams 80}}"
+
+  caddy:
+    image: lucaslorentz/caddy-docker-proxy:ci-alpine
+    container_name: caddy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./caddy-data:/data
+    networks:
+      - internal
+
+volumes:
+  # data:
+  caddy-data:
+    external: true
+
+networks:
+  internal:
+    external: true
+

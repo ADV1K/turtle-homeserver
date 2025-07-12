@@ -2,3 +2,5 @@
 
 caddy/log
 caddy/srv
+
+restic/backup

@@ -1,0 +1,127 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    volumes:
+      - $CONFIG/homepage:/app/config
+      - $CONFIG/homepage/assets:/app/public/assets
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /home:/home:ro
+    # ports:
+    #   - 3000:3000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - internal
+    restart: unless-stopped
+    labels:
+      caddy: home.advik.one
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+
+  speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - APP_KEY=base64:VvNMSSCPtJIIXACLH7iCfUkO0Q981HCW9FvimkGqhwQ=
+      - DB_CONNECTION=sqlite
+      - PUBLIC_DASHBOARD=true
+      - SPEEDTEST_SCHEDULE="0 6 * * *"
+      - DISPLAY_TIMEZONE=$TZ
+    volumes:
+      - $CONFIG/speedtest-tracker:/config
+    # ports:
+    #   - 8080:80
+    #   - 8443:443
+    networks:
+      - internal
+    restart: unless-stopped
+    labels:
+      caddy: speed.home.advik.one
+      caddy.reverse_proxy: "{{upstreams 80}}"
+
+  scrutiny:
+    container_name: scrutiny
+    image: ghcr.io/analogj/scrutiny:master-omnibus
+    # cap_add:
+    #   - SYS_RAWIO
+    #   - SYS_ADMIN
+    privileged: true
+    volumes:
+      - /run/udev:/run/udev:ro
+      - /etc/localtime:/etc/localtime:ro
+      - $CONFIG/scrutiny:/opt/scrutiny/config
+      - $CONFIG/scrutiny/influxdb:/opt/scrutiny/influxdb
+    devices:
+      - "/dev"
+      # - "/dev/sda"
+      # - "/dev/sdb"
+    # ports:
+    #   - "8080:8080" # webapp
+    #   - "8086:8086" # influxDB admin
+    networks:
+      - internal
+    restart: unless-stopped
+    labels:
+      caddy: scrutiny.home.advik.one
+      caddy.reverse_proxy: "{{upstreams 8080}}"
+
+  beszel:
+    image: henrygd/beszel
+    container_name: beszel
+    volumes:
+      - $CONFIG/beszel:/beszel_data
+    # ports:
+    #   - 8090:8090
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # for some reason this is not the default on linux ugh
+    networks:
+      - internal
+    restart: unless-stopped
+    labels:
+      caddy: beszel.home.advik.one
+      caddy.reverse_proxy: "{{upstreams 8090}}"
+
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    # ports:
+    #   - 8080:8080
+    networks:
+      - internal
+    restart: unless-stopped
+    labels:
+      caddy: dozzle.home.advik.one
+      caddy.reverse_proxy: "{{upstreams 8080}}"
+
+networks:
+  internal:
+    external: true
+
+
+  ## you can never have too many dashboards, right?
+  # glances:
+  #   image: nicolargo/glances:latest-full
+  #   container_name: glances
+  #   network_mode: host
+  #   pid: host
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
+  #     - /etc/localtime:/etc/localtime:ro
+  #     - /etc/os-release:/etc/os-release:ro
+  #     - /etc/hostname:/etc/hostname:ro
+  #     # - ${CONFIG}/glances:/etc/glances
+  #     - /home:/home:ro
+  #   devices:
+  #     - /dev/dri:/dev/dri
+  #   environment:
+  #       - GLANCES_OPT=-w
+  #   # ports:
+  #   #   - 61208-61209:61208-61209
+  #   # networks:
+  #   #   - internal
+  #   restart: always
+

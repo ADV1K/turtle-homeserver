@@ -1,0 +1,84 @@
+services:
+  adguard:
+    container_name: adguard
+    image: adguard/adguardhome
+    volumes:
+      - ${CONFIG}/adguardhome/conf:/opt/adguardhome/conf
+      - ${CONFIG}/adguardhome/work:/opt/adguardhome/work
+    # network_mode: host
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "9001:9001"  # admin panel
+      - "3000:3000"  # initial setup
+    networks:
+      - internal
+    restart: unless-stopped
+    labels:
+      caddy: adguard.home.advik.one
+      caddy.reverse_proxy: "host.docker.internal:9001"
+
+  caddy:
+    image: serfriz/caddy-cloudflare-ddns-crowdsec-geoip-security-dockerproxy:2
+    container_name: caddy
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - caddy-data:/data
+      # - caddy-config:/config
+    environment:
+      - CADDY_DOCKER_CADDYFILE_PATH=/etc/caddy/Caddyfile
+      - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+      - LOG_LEVEL=debug
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # for some reason this is not the default on linux ugh
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"  # HTTP/3 port (optional)
+    networks:
+      - internal
+      - coolify
+      - ipv6
+    restart: unless-stopped
+    labels:
+      caddy: ":2020"
+      caddy.reverse_proxy: "localhost:2019"
+      caddy.reverse_proxy.header_up: "Host localhost:2019"
+
+
+volumes:
+  caddy-data:
+    external: true
+  # caddy-config:
+
+networks:
+  internal:
+    external: true
+  coolify:
+    external: true
+  ipv6:
+    enable_ipv6: true
+
+
+  # pihole:
+  #   container_name: pihole
+  #   image: pihole/pihole:latest
+  #   # https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+  #   # cap_add:
+  #   #   - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+  #   # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+  #   ports:
+  #     - "53:53/tcp"
+  #     - "53:53/udp"
+  #     # - "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+  #     - "10001:80/tcp"
+  #   environment:
+  #     WEBPASSWORD: ${PIHOLE_PASSWORD}
+  #   volumes:
+  #     - ${CONFIG}/pihole:/etc/pihole
+  #     - ${CONFIG}/dnsmasq.d:/etc/dnsmasq.d
+  #     - /etc/localtime:/etc/localtime:ro
+  #   networks:
+  #       - internal
+  #   restart: unless-stopped

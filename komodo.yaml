@@ -1,0 +1,109 @@
+#################################
+# 🦎 KOMODO COMPOSE - SQLITE 🦎 #
+#################################
+
+## This compose file will deploy:
+##   1. Sqlite + FerretDB Mongo adapter
+##   2. Komodo Core
+##   3. Komodo Periphery
+
+services:
+  ferretdb:
+    image: ghcr.io/ferretdb/ferretdb
+    container_name: komodo-ferretdb
+    labels:
+      komodo.skip: # Prevent Komodo from stopping with StopAllContainers
+    # restart: unless-stopped
+    logging:
+      driver: ${COMPOSE_LOGGING_DRIVER:-local}
+    networks:
+      - internal
+    # ports:
+    #   - 27017:27017
+    volumes:
+      - ${CONFIG}/komodo:/state
+    environment:
+      - FERRETDB_HANDLER=sqlite
+      - USER=${USER}
+  
+  core:
+    image: ghcr.io/mbecker20/komodo:${COMPOSE_KOMODO_IMAGE_TAG:-latest}
+    container_name: komodo-core
+    labels:
+      komodo.skip: # Prevent Komodo from stopping with StopAllContainers
+    restart: unless-stopped
+    depends_on:
+      - ferretdb
+    logging:
+      driver: ${COMPOSE_LOGGING_DRIVER:-local}
+    networks:
+      - internal
+    # ports:
+    #   - 9120:9120
+    env_file: ../.env
+    environment:
+      KOMODO_DATABASE_ADDRESS: ferretdb
+    volumes:
+      ## Core cache for repos for latest commit hash / contents
+      - repo-cache:/repo-cache
+      ## Store sync files on server
+      # - /path/to/syncs:/syncs
+      ## Optionally mount a custom core.config.toml
+      # - ./core.config.toml:/config/config.toml
+    ## Allows for systemd Periphery connection at 
+    ## "http://host.docker.internal:8120"
+    # extra_hosts:
+    #   - host.docker.internal:host-gateway
+
+  ## Deploy Periphery container using this block,
+  ## or deploy the Periphery binary with systemd using 
+  ## https://github.com/mbecker20/komodo/tree/main/scripts
+  periphery:
+    image: ghcr.io/mbecker20/periphery:${COMPOSE_KOMODO_IMAGE_TAG:-latest}
+    container_name: komodo-periphery
+    labels:
+      komodo.skip: # Prevent Komodo from stopping with StopAllContainers
+    deploy:
+      resources:
+        limits:
+          cpus: '0'
+          memory: '0'
+        reservations:
+          cpus: '0'
+          memory: '0'
+    restart: unless-stopped
+    logging:
+      driver: ${COMPOSE_LOGGING_DRIVER:-local}
+    networks:
+      - internal
+    env_file: ../.env
+    volumes:
+      ## Mount external docker socket
+      - /var/run/docker.sock:/var/run/docker.sock
+      ## Allow Periphery to see processes outside of container
+      - /proc:/proc
+      ## use self signed certs in docker volume, 
+      ## or mount your own signed certs.
+      - ssl-certs:/etc/komodo/ssl
+      ## manage repos in a docker volume, 
+      ## or change it to an accessible host directory.
+      - repos:/etc/komodo/repos
+      ## manage stack files in a docker volume, 
+      ## or change it to an accessible host directory.
+      - ${STACKS}:/etc/komodo/stacks
+      ## Optionally mount a path to store compose files
+      # - /path/to/compose:/host/compose
+
+volumes:
+  # Sqlite
+  sqlite-data:
+  # Core
+  repo-cache:
+  # Periphery
+  ssl-certs:
+  repos:
+  stacks:
+
+networks:
+  internal:
+    external: true

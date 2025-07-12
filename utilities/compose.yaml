@@ -1,0 +1,17 @@
+services:
+  installer:
+    build:
+      context: .
+      dockerfile: installer.Dockerfile
+    container_name: installer
+    networks:
+      - internal
+    labels:
+      caddy: i.advik.one
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+    restart: unless-stopped
+
+networks:
+  internal:
+    external: true
+    enable_ipv6: true
